@@ -1,15 +1,14 @@
 package Date;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+
 
 public class Date {
     public static void main(String[] args) {
-        LocalDate date = LocalDate.now(); // get current date
-        LocalTime time = LocalTime.now(); // get current time
-        LocalDateTime dateTime = LocalDateTime.now(); // get current date and time
-
+        java.util.Date date = new java.util.Date(); // get current
+        System.out.println(date);
+        java.util.Date date1 = new java.util.Date(2000-1900,1,24);
+        System.out.println(date1);
+        date1.setTime(1000);
+        System.out.println(date1);
     }
 }
