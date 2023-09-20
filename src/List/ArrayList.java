@@ -1,20 +1,19 @@
 package List;
 
 import java.util.List;
+import java.util.ListIterator;
 
 public class ArrayList {
     public static void  main(String[] args) {
-        List<String> pokemonList = new java.util.ArrayList<>(); // create a new ArrayList name pokemonList
-        pokemonList.add("Pikachu"); // add new String to ArrayList
-        pokemonList.add("Pichu");
-        pokemonList.add(1,"Greeninja"); // add new String to index
-        System.out.println(pokemonList);
-        var temp =  pokemonList.get(2);
-        System.out.println(temp);
-        pokemonList.set(2,"Mewtwo");
-        System.out.println(pokemonList);
-        for (String s : pokemonList) {
-            System.out.println(s);
+        java.util.ArrayList<String> arrayList = new java.util.ArrayList<>();
+        arrayList.ensureCapacity(5); // ensureCapacity methods;
+        arrayList.add("Hello");
+        arrayList.add("Hi");
+        arrayList.add("Bye");
+        ListIterator<String> iterator = arrayList.listIterator(3); // listIterator
+        while (iterator.hasPrevious()) { // hasPrevious
+            System.out.println(iterator.previousIndex()+" "+iterator.previous()); // previousIndex and previous method
         }
+        arrayList.trimToSize(); // trimToSize methods
     }
 }

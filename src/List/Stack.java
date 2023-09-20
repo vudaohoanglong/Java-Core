@@ -1,6 +1,7 @@
 package List;
 
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class Stack {
     public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class Stack {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
+        ListIterator<Integer> listIterator = intStack.listIterator();
 
     }
 }
