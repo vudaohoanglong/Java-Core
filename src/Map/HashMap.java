@@ -1,14 +1,15 @@
 package Map;
 
+import java.util.Iterator;
 import java.util.Map;
 
 public class HashMap {
     public static void main(String[] args) {
-        Map<String,String> pokemonMap = new java.util.HashMap<String,String>();
-        pokemonMap.put("Pikachu","Lightning"); // add a pair <String, String> into Map
-        pokemonMap.put("Bulbasar","Grass");
-        pokemonMap.replace("Pikachu","Fighting"); // edit value of key
-        pokemonMap.remove("Pikachu"); // remove key
-        System.out.println(pokemonMap);
+        java.util.HashMap<String,String> hashMap = new java.util.HashMap<>();
+        hashMap.put("1","Hi");
+        hashMap.put("2","Hello");
+        for (Map.Entry s : hashMap.entrySet()) {
+            System.out.println(s.getKey()+" "+s.getValue());
+        }
     }
 }
