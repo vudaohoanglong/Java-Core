@@ -1,15 +1,18 @@
 package Set;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Set;
 
 public class HashSet {
     public static void main(String[] args) {
-        Set<String> pokemonSet = new java.util.HashSet<String>();
-        pokemonSet.add("Pikachu");
-        pokemonSet.add("Rayquaza");
-        boolean isPikachuAvailable = pokemonSet.contains("Pikachu");
-        pokemonSet.forEach((e)->{
-            System.out.println(e);
-        });
+        Collection<String> collection = new ArrayList<>();
+        collection.add("Hello");
+        java.util.HashSet<String> hashSet = new java.util.HashSet<>(collection);
+        hashSet.add("Hi");
+        System.out.println(hashSet.contains("Bye"));;
+        System.out.println(hashSet);
+        System.out.println(hashSet.remove("Hello"));
+        System.out.println(hashSet);
     }
 }
