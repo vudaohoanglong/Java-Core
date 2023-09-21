@@ -4,18 +4,24 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrintWriter {
     private static void example() {
         // using console out stream
         java.io.PrintWriter printWriter = new java.io.PrintWriter(System.out);
-        printWriter.write("Hello");
+        List<String> list = new ArrayList<>();
+        list.add("Hello");
+        printWriter.println(list);
         printWriter.flush();
         printWriter.close();
     }
     private static void example2() throws FileNotFoundException {
         java.io.PrintWriter printWriter = new java.io.PrintWriter(new FileOutputStream("test.txt"));
-        printWriter.write("Hello World");
+        List<String> list = new ArrayList<>();
+        list.add("Hello");
+        printWriter.print(list);
         printWriter.flush();
         printWriter.close();
     }

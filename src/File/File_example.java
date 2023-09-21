@@ -39,6 +39,6 @@ public class File_example {
         System.out.println(f.delete());
     }
     public static void main(String[] args) throws IOException {
-        example4();
+        example3();
     }
 }
